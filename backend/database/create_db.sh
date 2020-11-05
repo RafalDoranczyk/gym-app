@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+POSTGRES="psql -U $POSTGRES_USER"
+
+$POSTGRES <<EOSQL
+CREATE DATABASE ${DB_NAME};
+EOSQL
